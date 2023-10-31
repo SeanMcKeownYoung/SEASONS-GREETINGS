@@ -9,7 +9,7 @@
 
 
 
-		<title>Colder weather means comfort food in our digital-only Winter Recipe special section.</title>
+		<title>Pour yourself a cup of holiday cheer with Season's Greetings!</title>
 
 		<style type="text/css">
 
@@ -20,14 +20,21 @@
 		body, table, td, a, p { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 		img { -ms-interpolation-mode: bicubic; }
-
+        
+        .button {
+        background-color: #F1040C; 
+        color: #ffffff;
+	    transition: 100ms;
+	    &:hover {
+            outline: 3px solid rgb(255, 255, 255);
+            font-weight: 900;
+        }}
 
 		/* RESET STYLES */
 		img { border: 0; outline: none; text-decoration: none; }
 		table { border-collapse: collapse !important; }
 		body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
 		h1, h2, h3, h4, h5, h6, p { margin: 0 !important; }
-		h1 {font-size: 44px;}
 		h2 {font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 24px;}
 
 			
@@ -121,11 +128,10 @@
 			.w-pad { padding: 0 30px !important; }
 			.w-pad2 { padding: 0 10px !important; }
 			/*TEXT RESIZERS*/
-			.h1-text-resize { font-size:24px !important; line-height:1.2 !important; }
-			h1 {font-size: 11vw; line-height: 0.8;}
+            .h1-text-resize { font-size:48px !important; line-height:1 !important; }
 			.h2-text-resize { font-size:18px !important; line-height:1.2 !important; }
 			.h3-text-resize { font-size:16px !important; line-height:1.2 !important; }
-			.body-text-resize { font-size:14px !important; line-height:1.2 !important; }
+			.p-text-resize { font-size:17px !important; line-height:28px !important; }
 			/*IMAGE RESIZERS*/
 			.imgresize100 img {width:100% !important; height:auto !important;}
 			.imgresize100h img {height:40px !important; width:auto !important;}
@@ -134,12 +140,12 @@
 			.imgresize90 img {width:90% !important; height:auto !important;}
 			/*WIDTH RESIZERS*/
 			.resize90 {width:90% !important; height:auto !important;}
-
+            .button {transform: scale(1.2);}
 		/*INSERT ADDITIONAL MOBILE SYTLES ABOVE THIS LINE*/
 		}
 
 		/* HIDE ON DESKTOP */
-		.desktopOff { max-height: 0px; font-size: 0px; display: none; }
+		.desktopOff { max-height: 0px; font-size: 0px; display: none; visibility: hidden; }
 
 
 		/* LIGHT/DARK MODE CLASSES */
@@ -149,23 +155,9 @@
 		.lightMode { display: block !important; max-height:none !important; font-size:10px !important; }
 
 		/* LIGHT COLOR SCHEME */
-		.standardMode { background-color: #d8dbe7; }
+		.standardMode { background-color: #d8dee3; color: #4a4a4a }
 		.footerMode {background-color: #ffffff; color: #1e1e1e;}
-		.textMode {color: #4a4a4a}
-		.accentMode {color:#c60309}
-		body {
-			background-color: #d8dbe7;
-    		height:100%;
-    		width:100%;
-		}
-		.body {
-			background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnim.gif');
-    		background-size:100%;
-    		background-repeat: repeat-y;
-    		background-attachment: fixed;
-    		height:100%;
-    		width:100%;
-		}
+
 		:root {
 			color-scheme: light dark;
 			supported-color-schemes: light dark;
@@ -179,60 +171,50 @@
 	 		.darkimageFooter { display: inline-block !important;}
 			[data-ogsc] .darkimage {display: block !important;}
 			[data-ogsc] .lightimage {display: none !important;}
-			body {
-			background-color: #313254;
-    		height:100%;
-    		width:100%;
-		}
-		.body {
-			background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnimDk.gif');
-    		background-size:100%;
-    		background-repeat: repeat-y;
-    		background-attachment: fixed;
-    		height:100%;
-    		width:100%;
-		}
 		  }
 
-
-
-		  
 		/* DARK COLOR SCHEME */
 		@media (prefers-color-scheme: dark){ 
 			/*DARK MODE RESET STYLES*/
 			.lightMode { width: 0px !important; display: none !important; }
 			.darkMode { display: block !important; max-height:none !important; font-size:10px !important; }
-			.standardMode { background-color: #3b3c51; }
+			.standardMode { background-color: #2b313f; color: #ffffff; }
 			.footerMode {background-color: #1e1e1e; color: #ffffff;}
-			.textMode {color: #ffffff;}
-			.accentMode {color: #d32026;}
 		}
-		/*INSERT ADDITIONAL DARK MODE STYLES ABOVE THIS LINE*/
+		/*INSERT ADDITIONAL DARK MODE SYTLES ABOVE THIS LINE*/
 		em {
 			font-family: farnham-text-italic;
 			font-style: italic;
 		}
-
+        .campaign {
+			background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnim2.gif');
+    		background-size:100%;
+    		background-repeat: repeat-y;
+    		background-attachment: fixed;
+            background-color: #d8dee3;
+    		height:100%;
+    		width:100%;
+		}
+        @media (prefers-color-scheme: dark){ 
+			.campaign { 
+            background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnim3.gif');
+            background-color: #322d5a; 
+            color: #ffffff; }
+		}
 		</style>
 
 <!--[if gte mso 16]> 
 <style> 
 .textMode { 
 mso-style-textfill-type:gradient; 
-mso-style-textfill-fill-gradientfill-stoplist:"0 \#4A4A4A -1 100000\,100000 \#4A4A4A -1 100000"; 
+mso-style-textfill-fill-gradientfill-stoplist:"0 \#1e1e1e -1 100000\,100000 \#1e1e1e -1 100000"; 
 color:#000000 !important; 
-} 
-body { 
-mso-style-textfill-type:gradient; 
-mso-style-textfill-fill-gradientfill-stoplist:"0 \#313254 -1 100000\,100000 \#313254 -1 100000"; 
-color:#d8dbe7 !important; 
 } 
 </style> 
 <![endif]-->
 
 	</head>
-<body class="body" style="background-color: #d8dbe7; margin:0; padding:0; mso-line-height-rule: exactly;
-		@media (prefers-color-scheme: dark){background-color: #313254}">
+<body style="margin:0; padding:0; mso-line-height-rule: exactly;">
 
 <center>
 <!-- mobile-300 TABLE -->
@@ -249,7 +231,7 @@ color:#d8dbe7 !important;
 		max-width:0px;
 		opacity:0;
 		overflow:hidden;">
-		Wishing you and your family a happy holidays.
+        Coming November 23, Season's Greetings is filled with holiday tips and seasonal goodness.
 		</td>
 	</tr>
 	<!-- END PREHEADER -->
@@ -259,14 +241,12 @@ color:#d8dbe7 !important;
 
 
 <!-- FULL WIDTH BACKGROUND COLOR - ADJUSTABLE -->
-
-
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+<section role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="campaign" bgcolor="#d8dee3">
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td align="center" valign="top">
 	<!-- LOGO -->
-		<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
-
+		<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#d8dee3"class="standardMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="30" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -296,7 +276,7 @@ color:#d8dbe7 !important;
 
 <!-- CAMPAIGN BODY START - END AT 390 -->		
 	<!-- ! PRIMARY HEADLINE ! USE ONLY ONCE PER EMAIL ! -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="textMode" !important;>
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -308,8 +288,10 @@ color:#d8dbe7 !important;
 					<tr>
 						<td align="left" valign="top">
 						<!-- USE ONLY 1 <H1> ELEMENT, AS THE FIRST TEXT ELEMENT WHENEVER POSSIBLE -->
-							<h1 style="font-family: 'farnham headline', Georgia, serif; display: inline;" class="accentMode"> Season's Greetings</h1> <br>
-							<h1 style="font-family: 'farnham headline', Georgia, serif; display: inline;"class="textMode">Coming November 23.</h1>
+							<h1 style="font-size: 60px; font-family: 'farnham headline', Garamond, serif; font-weight: 600; line-height: 55px; display: inline;" class="h1-text-resize">
+                            Season&#8217;s Greetings</h1><br>
+							<h1 style="font-size: 60px; font-family: 'farnham headline', Garamond, serif; font-weight: 600; line-height: 55px; display: inline; color:#F1040C" class="h1-text-resize">
+                            Coming November 23.</h1>
 							</td>
 					</tr>
 				</table>
@@ -325,7 +307,7 @@ color:#d8dbe7 !important;
 
 
 	<!-- FULL WIDTH TEXT -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="textMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -336,7 +318,7 @@ color:#d8dbe7 !important;
 			<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 				<tr>
 					<td align="left" valign="top">
-						<p style="z-index: 5;font-family: 'farnham-headline-regular', Georgia, serif;  font-size: 22px; line-height: 1.75; letter-spacing: 0.2px;" class="textMode">
+						<p style="font-family: 'farnham-headline-regular', Georgia, serif; font-size: 20px; line-height: 40px;" class="p-text-resize">
 							<strong>Pour yourself an eggnog and dive into December with the ultimate Yuletide Guide.&nbsp;</strong> It's stuffed full of goodies like holiday recipes, home decor and travel tips, shopping advice, activities for kids, what to watch throughout the season, a much-loved tradition or two and so much more, <em>exclusively in your Ann Arbor News.</em> </p>
 					</td>
 				</tr>
@@ -354,7 +336,7 @@ color:#d8dbe7 !important;
 
 
 	<!-- LEFT SIDECAR -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="textMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -367,12 +349,6 @@ color:#d8dbe7 !important;
 			<!-- IMAGE COLUMN -->
 					<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
 						<td class="stack imgresize100 img w-pad2"  width="425" align="left" valign="top" style="width:425px;">
-						<!-- FILE DIMENSIONS SHOULD BE DOUBLE FOR RETINA DISPLAY
-							width="" attribute must be set -->
-							<!--<![endif]-->
-							<!--[if gte mso 9]>
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/SeasonGreetingsCoverstatic.png">
-							<![endif]-->
 						<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/SeasonGreetingsCoverANIMATIONfinal_1.gif" width="425" style="margin:0; padding:0; border:none; display:block; filter: drop-shadow(-5px 2px 5px rgba(0, 0, 0, 0.55));" border="0" alt="Cover" />
 						</td>
 					<!-- COLUMN SPACER -->
@@ -402,7 +378,7 @@ color:#d8dbe7 !important;
 					<!-- BODY TEXT -->
 							<tr>
 								<td class="left-align w-pad" align="left" valign="top">
-									<p class="textMode" style="font-family: 'Arial', sans-serif; font-size: 16px; line-height: 1.75">Print subscribers get free access to the online newspaper with more content, special sections, the New York Times Book Review, and Washington Post Weekly edition by activating their account.</p>
+									<p style="font-family: 'Arial', sans-serif; font-size: 16px; line-height: 32px" class="p-text-resize">Print subscribers get free access to the online newspaper with more content, special sections, the New York Times Book Review, and Washington Post Weekly edition by activating their account.</p>
 								</td>
 							</tr>
 						<!-- ROW SPACER -->
@@ -417,8 +393,8 @@ color:#d8dbe7 !important;
 								ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
 								<table class="left-align" role="presentation" border="0" cellspacing="0" cellpadding="0">
 									<tr>
-										<!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
-										<td style="padding: 12px 50px 12px 20px; background-color: #d32026;" align="center">
+
+										<td class="button" style="width: 80vw; height: 50px; padding-left: 22px;" align="left">
 <!-- CAMPAIGN BODY END -->		
 
 											<a rel="noopener" href="https://enewsAA.mlive.com" target="_blank" style="font-size: 22px; font-family: Helvetica, Arial, sans-serif; font-weight: regular; color: #ffffff; text-decoration: none; display: inline-block;">Explore!</a>
@@ -447,15 +423,16 @@ color:#d8dbe7 !important;
 			</tr>
 		</table>
 	<!-- END LEFT SIDECAR -->
+
 </td>
 </tr>
 </table>
-</div>
 
+</section>
 <!-- END FULL WIDTH BACKGROUND COLOR - DARK -->
 
 <!-- FULL WIDTH BACKGROUND COLOR - LIGHT, FOOTER -->
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="footerMode" 		style="background-color: #ffffff; @media (prefers-color-scheme: dark){background-color: #1e1e1e}">
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="footerMode">
     <tr>
         <td align="center" valign="top">
 
@@ -502,7 +479,7 @@ color:#d8dbe7 !important;
 
 						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0">
 					<!-- BODY TEXT -->
-			<!-- DESKTOP-ONLY CONTACTS LIST -->						
+			<!-- DEESKTOP-ONLY CONTACTS LIST -->						
 							<tr>
 								<td align="left" valign="top">
 									<p style="font-family: 'Arial', sans-serif; font-size: 13.5px; line-height: 1.4;" class="footerMode">Having trouble viewing this email? <a rel="noopener" href="{view_url}" target="_blank" style="text-decoration:underline;"class="footerMode">View in your browser	
@@ -638,6 +615,3 @@ color:#d8dbe7 !important;
 {beacon}
 </body>
 </html>
-
-
-

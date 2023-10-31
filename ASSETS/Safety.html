@@ -152,20 +152,8 @@
 		.standardMode { background-color: #d8dbe7; }
 		.footerMode {background-color: #ffffff; color: #1e1e1e;}
 		.textMode {color: #4a4a4a}
-		.accentMode {color:#c60309}
-		body {
-			background-color: #d8dbe7;
-    		height:100%;
-    		width:100%;
-		}
-		.body {
-			background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnim.gif');
-    		background-size:100%;
-    		background-repeat: repeat-y;
-    		background-attachment: fixed;
-    		height:100%;
-    		width:100%;
-		}
+		.accentMode {color:#d32026}
+
 		:root {
 			color-scheme: light dark;
 			supported-color-schemes: light dark;
@@ -179,19 +167,6 @@
 	 		.darkimageFooter { display: inline-block !important;}
 			[data-ogsc] .darkimage {display: block !important;}
 			[data-ogsc] .lightimage {display: none !important;}
-			body {
-			background-color: #313254;
-    		height:100%;
-    		width:100%;
-		}
-		.body {
-			background-image:url('https://media.sailthru.com/composer/images/sailthru-prod-6fj/SimpleSnowAnimDk.gif');
-    		background-size:100%;
-    		background-repeat: repeat-y;
-    		background-attachment: fixed;
-    		height:100%;
-    		width:100%;
-		}
 		  }
 
 
@@ -212,7 +187,12 @@
 			font-family: farnham-text-italic;
 			font-style: italic;
 		}
-
+.snow {
+	z-index: -1;
+}
+.forward {
+	z-index: 0;
+}
 		</style>
 
 <!--[if gte mso 16]> 
@@ -222,17 +202,16 @@ mso-style-textfill-type:gradient;
 mso-style-textfill-fill-gradientfill-stoplist:"0 \#4A4A4A -1 100000\,100000 \#4A4A4A -1 100000"; 
 color:#000000 !important; 
 } 
-body { 
+.standardMode { 
 mso-style-textfill-type:gradient; 
-mso-style-textfill-fill-gradientfill-stoplist:"0 \#313254 -1 100000\,100000 \#313254 -1 100000"; 
-color:#d8dbe7 !important; 
+mso-style-textfill-fill-gradientfill-stoplist:"0 \#2b313f -1 100000\,100000 \#2b313f -1 100000"; 
+color:#e6e6e3 !important; 
 } 
 </style> 
 <![endif]-->
 
 	</head>
-<body class="body" style="background-color: #d8dbe7; margin:0; padding:0; mso-line-height-rule: exactly;
-		@media (prefers-color-scheme: dark){background-color: #313254}">
+<body style="margin:0; padding:0; mso-line-height-rule: exactly;">
 
 <center>
 <!-- mobile-300 TABLE -->
@@ -261,11 +240,12 @@ color:#d8dbe7 !important;
 <!-- FULL WIDTH BACKGROUND COLOR - ADJUSTABLE -->
 
 
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e6e6e3" class="standardMode">
 <tr>
     <td align="center" valign="top">
 	<!-- LOGO -->
 		<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+
 
 		<!-- SPACER -->
 			<tr>
@@ -296,7 +276,7 @@ color:#d8dbe7 !important;
 
 <!-- CAMPAIGN BODY START - END AT 390 -->		
 	<!-- ! PRIMARY HEADLINE ! USE ONLY ONCE PER EMAIL ! -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e6e6e3" class="standardMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -325,7 +305,7 @@ color:#d8dbe7 !important;
 
 
 	<!-- FULL WIDTH TEXT -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e6e6e3" class="standardMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -354,7 +334,7 @@ color:#d8dbe7 !important;
 
 
 	<!-- LEFT SIDECAR -->
-	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="transparent">
+	<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e6e6e3" class="standardMode">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -371,7 +351,7 @@ color:#d8dbe7 !important;
 							width="" attribute must be set -->
 							<!--<![endif]-->
 							<!--[if gte mso 9]>
-							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/SeasonGreetingsCoverstatic.png">
+							<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/RECIPES%20ANIMATION%20FINAL.jpg">
 							<![endif]-->
 						<img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/SeasonGreetingsCoverANIMATIONfinal_1.gif" width="425" style="margin:0; padding:0; border:none; display:block; filter: drop-shadow(-5px 2px 5px rgba(0, 0, 0, 0.55));" border="0" alt="Cover" />
 						</td>
@@ -455,7 +435,7 @@ color:#d8dbe7 !important;
 <!-- END FULL WIDTH BACKGROUND COLOR - DARK -->
 
 <!-- FULL WIDTH BACKGROUND COLOR - LIGHT, FOOTER -->
-<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="footerMode" 		style="background-color: #ffffff; @media (prefers-color-scheme: dark){background-color: #1e1e1e}">
+<table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" class="footerMode">
     <tr>
         <td align="center" valign="top">
 
@@ -638,6 +618,3 @@ color:#d8dbe7 !important;
 {beacon}
 </body>
 </html>
-
-
-
