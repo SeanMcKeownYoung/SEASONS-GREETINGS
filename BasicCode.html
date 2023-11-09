@@ -21,7 +21,9 @@
 		body, table, td, a, p { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 		table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
 		img { -ms-interpolation-mode: bicubic; }
-        
+		@media screen and (min-width: 639px)  {
+        .mobile-break { display: none; }
+    }
 
 
 		/* RESET STYLES */
@@ -29,9 +31,10 @@
 		table { border-collapse: collapse !important; }
 		body { margin: 0 !important; padding: 0 !important; width: 100% !important; }
 		h1, h2, h3, h4, h5, h6, p { margin: 0 !important; }
-		h2 {font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 24px;}
 
-			
+		/* HIDE ON DESKTOP */
+		.desktopOff { max-height: 0px; font-size: 0px; display: none; }		
+
 			
 		/* iOS BLUE LINKS */
 		a[x-apple-data-detectors] {
@@ -51,6 +54,7 @@
 		/* MEDIA QUERIES - THESE ARE MOBILE STYLES - STAY WITHIN THE @MEDIA CURLY BRACES */
 		@media all and (max-width:639px){ 
 			/*MOBILE RESET STYLES*/
+			.mobile-380 { width:380px!important; padding: 0 !important; }
 			.mobile-360 { width:360px!important; padding: 0 !important; }
 			.mobile-320 { width:320px!important; padding: 0 !important; }
 			.mobile-300 { width:300px!important;  padding: 0 !important; }
@@ -59,6 +63,7 @@
 			/*MOBILE VISIBILITY*/
 			.mobileOff { width: 0px !important; display: none !important; }
 			.mobileOn { display: block !important; max-height:none !important; font-size:10px !important; }
+
 			/*ALIGNERS*/
 			.center-align { text-align: center !important; margin: 0 auto !important; }
 			.left-align { text-align: left !important; }
@@ -66,13 +71,14 @@
 			/*HEIGHT PADDING*/
 			.h-pad { padding: 5px 0 !important; }
 			/*WIDTH PADDING*/
-			.w-pad { padding: 0 30px !important; }
-			.w-pad2 { padding: 0 10px !important; }
+			.w-pad { padding: 0 10px !important; }
+			.w-pad2 { padding: 0 0px !important; }
 			/*TEXT RESIZERS*/
-            .h1-text-resize { font-size:48px !important; line-height:1 !important; }
-			.h2-text-resize { font-size:18px !important; line-height:1.2 !important; }
+            .h1-text-resize { font-size:12.5vw !important; line-height:1 !important; }
+			.h2-text-resize { font-size:8vw !important; line-height:1.2 !important; margin-top: 30px !important;}
 			.h3-text-resize { font-size:16px !important; line-height:1.2 !important; }
-			.p-text-resize { font-size:17px !important; line-height:28px !important; }
+			.intro-text-resize { font-size:1.4em !important; line-height:1.5em !important; }
+			.p-text-resize { font-size:1.25em !important; line-height:1.5em !important; }
 			/*IMAGE RESIZERS*/
 			.imgresize100 img {width:100% !important; height:auto !important;}
 			.imgresize100h img {height:40px !important; width:auto !important;}
@@ -81,12 +87,13 @@
 			.imgresize90 img {width:90% !important; height:auto !important;}
 			/*WIDTH RESIZERS*/
 			.resize90 {width:90% !important; height:auto !important;}
-            .button {transform: scale(1.2);}
+            .button {width:50vw !important; height: 2vh !important; padding-left: 30px !important;}
 		/*INSERT ADDITIONAL MOBILE SYTLES ABOVE THIS LINE*/
 		}
 
 		/* HIDE ON DESKTOP */
-		.desktopOff { max-height: 0px; font-size: 0px; display: none; visibility: hidden; }
+		.desktopOff { width: 0px !important; display: none !important;  font-size:0em !important; line-height:0em !important;}
+		.desktopOn { display: block !important; max-height:none !important; font-size:10px !important; }
 
 
 		/* LIGHT/DARK MODE CLASSES */
@@ -178,12 +185,12 @@ color:#000000 !important;
     <tr>
         <td align="center" valign="top">
         <!-- LOGO -->
-            <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+            <table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
             <!-- SPACER -->
                 <tr>
                     <td height="30" style="font-size:10px; line-height:1;">&nbsp;</td>
                 </tr>
-                <table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+                <table class="mobile-360" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td class="imgresize100 img" align="left" valign="top">
                                 <img src="https://media.sailthru.com/composer/images/sailthru-prod-6fj/MI_AnnArbor_light_5.png" height="60" width="auto" style="margin:0; padding:0; border:none; display:block; max-width: 400px;" border="0" alt="The Ann Arbor News Online" >
@@ -209,14 +216,14 @@ color:#000000 !important;
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-360" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 						<td align="left" valign="top">
 						<!-- USE ONLY 1 <H1> ELEMENT, AS THE FIRST TEXT ELEMENT WHENEVER POSSIBLE -->
-							<h1 style="font-size: 52px; font-family: 'Bitter', serif; font-weight: 500; line-height: 50px; display: inline; color:#686466" 
+							<h1 style="font-size: 60px; font-family: 'Bitter', serif; font-weight: 200; letter-spacing: -1.5px;line-height: 50px; display: inline; color:#686466" 
                             class="h1-text-resize">
                             Season&#8217;s Greetings</h1><br>
-							<h1 style="font-size: 52px; font-family: 'Bitter', serif; font-weight: 500;  line-height: 55px; display: inline; color:#da0007;" 
+							<h1 style="font-size: 60px; font-family: 'Bitter', serif; font-weight: 200; letter-spacing: -1.5px; line-height: 55px; display: inline; color:#da0007;" 
                             class="h1-text-resize accent">
                             Coming November 23.</h1>
 							</td>
@@ -242,10 +249,10 @@ color:#000000 !important;
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-			<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+			<table class="mobile-360" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
 				<tr>
 					<td align="left" valign="top">
-						<p style="font-family: 'Bitter', serif; font-weight: 400; font-size: 22px; line-height: 40px; color:#626262" class="p-text-resize">
+						<p style="font-family: 'Bitter', serif; font-weight: 400; font-size: 22px; line-height: 40px; color:#626262" class="intro-text-resize">
 							<strong>Pour yourself an eggnog and dive into December with the ultimate Yuletide Guide.&nbsp;</strong> It's stuffed full of goodies like holiday recipes, home decor and travel tips, shopping advice, activities for kids, what to watch throughout the season, a much-loved tradition or two and so much more, <em>exclusively in your Ann Arbor News.</em> </p>
 					</td>
 				</tr>
@@ -271,7 +278,7 @@ color:#000000 !important;
 			<tr>
 				<td align="center" valign="top">
 			<!-- PARENT ALIGNMENT TABLE -->
-				<table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-380" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 			<!-- IMAGE COLUMN -->
 					<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
@@ -283,20 +290,20 @@ color:#000000 !important;
 			<!-- CONTENT COLUMN -->
 						<td class="stack" width="200" align="center" valign="top">
 
-						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0" >
+						<table class="mobile-380" role="presentation" cellpadding="0" cellspacing="0" border="0" >
 						<!-- MOBILE-ONLY SPACER: ADDS SPACE ABOVE HEADLINE -->
 							<tr>
-								<td class="desktopOff mobileOn" height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
+								<td class="desktopOff mobileOn" height="25" style="font-size:10px; line-height:1;">&nbsp;</td>
 							</tr>
 						<!-- ROW SPACER -->
 						<tr>
-							<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+							<td height="15" style="font-size:10px; line-height:1;">&nbsp;</td>
 						</tr>
 						
-<!-- HEADLINE -->
+<!-- FIRST LEFT SIDECAR CHUNK -->
 							<tr>
 								<td class="left-align w-pad" align="left" valign="top">
-							<h2 class="textMode" style="font-family: 'Bitter', serif; font-size: 25px; line-height: 28px; font-weight: 500; color:#da0007" class="p-text-resize">FREE for subscribers.</h2>
+							<h2 class="h2-text-resize textMode" style="font-family: 'Bitter', serif; font-size: 34px; line-height: 34px; font-weight: 200; color:#da0007">FREE for subscribers!</h2>
 								</td>
 							</tr>
 						<!-- ROW SPACER -->
@@ -306,12 +313,31 @@ color:#000000 !important;
 					<!-- BODY TEXT -->
 							<tr>
 								<td class="left-align w-pad" align="left" valign="top">
-									<p style="font-family: 'Bitter', serif; font-size: 1em; line-height: 26px; color:#626262" class="p-text-resize">All print customers<br> can access the online newspaper & many extras at no additional cost.</p>
+									<p style="font-family: 'Bitter', serif; font-size: 16px; font-weight: 400; line-height: 1.5em; color:#626262" class="p-text-resize">All print customers can access the online newspaper & many extras at no additional cost.</p>
 								</td>
 							</tr>
 						<!-- ROW SPACER -->
 							<tr>
-								<td height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+								<td height="15" style="font-size:10px; line-height:1;">&nbsp;</td>
+							</tr>
+                    <tr>
+                        <!-- CHANGE ALIGMENT ON THIS <td> -->
+                        <td class="left-align w-pad" align="left" valign="top">
+                        <table class="left-align" role="presentation" border="0" cellspacing="0" cellpadding="0">
+
+								</table>
+								</td>
+<!-- SECOND LEFT SIDECAR CHUNK -->
+
+					<!-- BODY TEXT -->
+							<tr>
+								<td class="left-align w-pad" align="left" valign="top">
+									<p style="font-family: 'Bitter', serif; font-size: 16px; line-height: 1.5em; color:#626262; padding-top: 10px;" class="p-text-resize"><strong>Haven&#8217;t logged in yet? </strong><br>Start by activating your account. <br class="mobile-break"> <em>Click here.</em> </p>
+								</td>
+							</tr>
+						<!-- ROW SPACER -->
+							<tr>
+								<td height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
 							</tr>
 					<!-- BULLETPROOF BUTTON -->
                     <tr>
@@ -322,21 +348,56 @@ color:#000000 !important;
                         <table class="left-align" role="presentation" border="0" cellspacing="0" cellpadding="0">
                             <tr>
                                 <!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
-                                <td style="padding: 12px 50px 12px 20px; background-color: #da0007;" align="center"onMouseOver="this.style.background='#930005'"
+                                <td class="button" style="width:425px; padding: 12px 20px 12px 18px; background-color: #da0007;" align="left"onMouseOver="this.style.background='#930005'" 
                                 onMouseOut="this.style.background='#da0007'">	
-                                    <a rel="noopener" href="https://enewsAA.mlive.com" target="_blank" style="font-size: 22px; font-family: 'Bitter', serif;  font-weight: 300; color: #ffffff; text-decoration: none; display: inline-block;" >Explore!</a>
+                                    <a rel="noopener" href="myaccount.mlive.com" target="_blank" style="font-size: 1.2em; font-family: 'Bitter', serif;  font-weight: 300; color: #ffffff; text-decoration: none; display: inline-block;">Activate account!</a>
+									
                                 </td>
                             </tr>
 						<!-- ROW SPACER -->
 						<tr>
 							<td height="20" style="font-size:20px; line-height:1;">&nbsp;</td>
 						</tr>
-	
-								</table>
-								</td>
+						
 							</tr>
 						</table>
 						</td>
+
+<!-- THIRD LEFT SIDECAR CHUNK -->
+
+					<!-- BODY TEXT -->
+					<tr>
+						<td class="left-align w-pad" align="left" valign="top">
+							<p style="font-family: 'Bitter', serif; font-size: 16px; line-height: 1.5em; color:#626262; padding-top: 10px;" class="p-text-resize"><strong>Already have a login? </strong><br>Explore your Online Newspaper. <br class="mobile-break"> <em>Click here.</em></p>
+						</td>
+					</tr>
+				<!-- ROW SPACER -->
+					<tr>
+						<td height="5" style="font-size:10px; line-height:1;">&nbsp;</td>
+					</tr>
+			<!-- BULLETPROOF BUTTON -->
+			<tr>
+				<!-- CHANGE ALIGMENT ON THIS <td> -->
+				<td class="left-align w-pad" align="left" valign="top">
+				<!-- WIDTH ADJUSTMENT TABLE
+				ADD width="" TO SET A FIXED BUTTON WIDTH, USE 100% FOR FULL WIDTH BUTTON -->
+				<table class="left-align" role="presentation" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<!-- PADDING ON THIS <td> MAKES WIDTH RESPONSIVE TO LENGTH OF BUTTON TEXT -->
+						<td class="button" style="width:425px; padding: 12px 20px 12px 18px; background-color: #da0007;" align="left"onMouseOver="this.style.background='#930005'"
+						onMouseOut="this.style.background='#da0007'">	
+							<a rel="noopener" href="https://enewsAA.mlive.com" target="_blank" style="font-size: 1.2em; font-family: 'Bitter', serif;  font-weight: 300; color: #ffffff; text-decoration: none; display: inline-block;" >Explore now!</a>
+						</td>
+					</tr>
+				<!-- ROW SPACER -->
+				<tr>
+					<td height="20" style="font-size:20px; line-height:1;">&nbsp;</td>
+				</tr>
+				
+					</tr>
+				</table>
+				</td>
+
 
 						
 			<!-- END CONTENT COLUMN -->
@@ -366,7 +427,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
         <td align="center" valign="top">
 
     <!-- SECONDARY HEADLINE -->
-    <table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode">
+    <table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode">
         <!-- SPACER -->
             <tr>
                 <td height="45" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -374,10 +435,10 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
             <tr>
                 <td align="center" valign="top">
             <!-- ALIGNMENT TABLE - CHANGE width="" TO ADJUST DISPLAY WIDTH -->
-                <table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+                <table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
                     <tr>
                         <td align="left" valign="top">
-                            <h2 style="font-family: 'Bitter', serif; font-weight: 200; color: #626262;">
+                            <h2 class="h2-text-resize" style="font-family: 'Bitter', serif; font-size: 34px; line-height: 34px; font-weight: 200; color: #626262;">
 								We're here to help</h2>
                         </td>
                     </tr>
@@ -393,7 +454,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
     <!-- END SECONDARY HEADLINE -->
 
 	<!-- 2 COLUMN CONTENT: IMAGE, TEXT, BUTTON -->
-		<table class="mobile-320" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode" >
+		<table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" class="footerMode" >
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -401,7 +462,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 			<tr>
 				<td align="center" valign="top">
 		<!-- PARENT ALIGNMENT TABLE -->
-				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 			<!-- LEFT COLUMN -->
 						<td class="stack" width="400" align="left" valign="top">
@@ -411,9 +472,8 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 			<!-- DEESKTOP-ONLY CONTACTS LIST -->						
 							<tr>
 								<td align="left" valign="top">
-									<p style="font-family: 'Lato', sans-serif; font-weight: 400; font-size: 13.5px; line-height: 1.4; color: #1e1e1e;" class="footerMode">Having trouble viewing this email? 
-                                    <a rel="noopener" href="{view_url}" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">View in your browser	
-									<span class="desktopOn mobileOff"><br><br></span></a>
+									<p style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 1em; line-height: 1.4; color: #1e1e1e; display: block" class="footerMode"><nobr>Having trouble viewing this email?</nobr> 
+                                    <a rel="noopener" href="{view_url}" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode"><nobr>View in your browser</nobr></a> <br><br>
 									To ensure receipt of our emails, please add <a rel="noopener" href="mailto:customercare@sts.mlive.com" target="_blank" style="text-decoration:underline;"class="footerMode">customercare@sts.mlive.com</a> to your address book or a safe sender list. You received this email because you are a subscriber to <a rel="noopener" href="https://mlive.com" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">mlive.com</a> or The Ann Arbor News.</p>
 								</td>
 
@@ -422,22 +482,22 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 
 						</td>
 			<!-- END LEFT COLUMN -->
-
-										<!-- COLUMN SPACER -->
+			<!-- COLUMN SPACER -->
 						<td class="stack" width="10" align="center" valign="top" style="font-size: 0px; line-height: 0px;">&nbsp;</td>
+
 
 			<!-- RIGHT COLUMN -->
 						<td class="stack" width="190" align="center" valign="top">
+						<table class="mobile-360" role="presentation" cellpadding="0" cellspacing="0" border="0">
 
-						<table class="mobile-300" role="presentation" cellpadding="0" cellspacing="0" border="0">
-			<!-- MOBILE-ONLY SPACER: ADDS SPACE ABOVE CONTACTS LIST -->
-						<tr>
-							<td class="desktopOff mobileOn" height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
-						</tr>
 					<!-- BODY TEXT -->
 							<tr>
+						<!-- ROW SPACER -->
+						<tr>
+							<td class="mobile-break" height="20" style="font-size:10px; line-height:1;">&nbsp;</td>
+						</tr>								
 								<td align="left" valign="top">
-                                    <p style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 13.5px; line-height: 1.4; color: #1e1e1e;">
+                                    <p style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 1em; line-height: 1.4; color: #1e1e1e;">
                                         <a rel="noopener" href="https://www.mlive.com/mlive_contacts/page/contact_home.html" target="_blank" style="text-decoration:underline;"class="footerMode">Contact Us</a><br>
                                         <a rel="noopener" href="https://www.mlive.com/mobile-device/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Download our app</a><br>
                                         <a rel="noopener" href="https://www.mlive.com/privacy-policy/" target="_blank" style="text-decoration:underline; color: #1e1e1e;"class="footerMode">Privacy policy</a><br>
@@ -467,7 +527,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 
 			
 	<!-- ! ADDRESS ! REQUIRED FOR ALL EMAILS ! -->
-		<table class="mobile-320 footerMode" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
+		<table class="mobile-360 footerMode" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
 		<!-- SPACER -->
 			<tr>
 				<td height="10" style="font-size:10px; line-height:1;">&nbsp;</td>
@@ -475,7 +535,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 			<tr>
 				<td align="center" valign="top">
 			<!-- ALIGNMENT TABLE -->
-				<table class="mobile-300" role="presentation" width="600" cellpadding="0" cellspacing="0" border="0">
+				<table class="mobile-360" role="presentation" width="640" cellpadding="0" cellspacing="0" border="0">
 
 				<!-- LOGO BAR  -->
 					<!-- ADD IMG RESIZER CLASS TO THIS <td>, NOT <img> -->
@@ -497,7 +557,7 @@ style="background:#fff; background-image:linear-gradient(#ffffff,#ffffff); color
 				</tr>
 				<tr>
 					<td align="left" valign="top">
-						<p style="font-family: 'Lato', sans-serif; font-size: 10px; line-height: 1.4; text-transform: uppercase;" > 111 N Ashley St., Ann Arbor, MI 48104</p>
+						<p style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 0.8em; letter-spacing: 3px; line-height: 1.4; text-transform: uppercase;" > 111 N Ashley St., Ann Arbor, MI 48104</p>
 					</td>
 				</tr>
 				</table>
